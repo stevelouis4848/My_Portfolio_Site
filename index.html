@@ -2,48 +2,86 @@
 <html lang="en">
    <head>
       <!--  Meta  -->
-      <meta charset="UTF-8" />
+      <meta charset="UTF-8" >
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <meta name="keywords" content="">
       <meta name="author" content="Steve Louis">
       <meta name="description" content="">
       <!-- title -->
-      <title>Steve Louis portfolio</title>
+      <title>Steve Louis</title>
       <!--  Styles  -->
       <!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css">-->
+      <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
       <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
-      <link rel="stylesheet" type="text/css "href="index.css">
+      <link rel="stylesheet" type="text/css" href="styles/index.css">
    </head>
    <body id="body">
       <header id="header">
          <div class="container" >
-            <div id="branding">
-               <span>
-                  <a href=#showcase>
-                     <h3>STEVE LOUIS</h3>
-                  </a>
-               </span>
-            </div>
+            <!--<div id="branding">-->
+            <a id="branding" href="#showcase">
+               <h3>STEVE LOUIS</h3>
+            </a>
+            <!--</div>-->
             <nav>
                <div id="hamburger_wrapper">
-                  <label for="toggle"><i id="hamburger_menu_item" class="fas fa-bars"></i></label>
-                  <!--<label id="hamburger_menu_item" for="toggle">&#9776;</label>-->
+                  <a>
+                  <i id="hamburger_menu" class="fas fa-bars"></i>
+                  </a>
                </div>
-               <input type="checkbox" id="toggle">
-               <ul id="menu" onclick="menu_keep_header()">
-                  <li><a href=#showcase>Home</a></li>
-                  <li><a href=#about_me>About</a></li>
-                  <li><a href=#education>Education</a></li>
-                  <li><a href=#skills>Skills</a></li>
-                  <li><a href=#projects>Projects</a></li>
-                  <li><a href=#contact>Contact</a></li>
-                  <li id="resume_link"><a href="assets/documents/ResumePdf.pdf" target="_blank" style="color:green;">Resume</a></li>
+               <ul id="menu_desktop" class="menu">
+                  <li>
+                     <a href="#showcase">Home</a>
+                  </li>
+                  <li>
+                     <a href="#about_me_above">About</a>
+                  </li>
+                  <li>
+                     <a href="#education_above">Education</a>
+                  </li>
+                  <li>
+                     <a href="#skills_above">Skills</a>
+                  </li>
+                  <li>
+                     <a href="#projects_above">Projects</a>
+                  </li>
+                  <li>
+                     <a href="#contact_above">Contact</a>
+                  </li>
+                  <li id="resume_link">
+                     <a href="assets/documents/ResumePdf.pdf" target="_blank">Resume</a>
+                  </li>
+               </ul>
+               <ul id="menu_mobile" class="menu">
+                  <li>
+                     <a href="#showcase">Home</a>
+                  </li>
+                  <li>
+                     <a href="#about_me_above">About</a>
+                  </li>
+                  <li>
+                     <a href="#education_above">Education</a>
+                  </li>
+                  <li>
+                     <a href="#skills_above">Skills</a>
+                  </li>
+                  <li>
+                     <a href="#projects_above">Projects</a>
+                  </li>
+                  <li>
+                     <a href="#contact_above">Contact</a>
+                  </li>
+                  <li id="resume_link">
+                     <a href="assets/documents/ResumePdf.pdf" target="_blank">Resume</a>
+                  </li>
                </ul>
             </nav>
          </div>
       </header>
+      <!-- Start Showcase section -->
       <section id="showcase" class="main_sections_wrapper">
-         >
          <div class="container">
             <div class="main_sections_content_wrapper">
                <h3>Welcome To My Portfolio</h3>
@@ -53,158 +91,406 @@
             </div>
          </div>
       </section>
+      <!-- Start about_me section -->
       <section id="about_me" class="main_sections_wrapper">
+         <span id="about_me_above" class="anchor"></span>
+         <h2 id="about_me_title" class="main_section_title">About Me</h2>
          <div class="container">
-            <h3>About Me</h3>
-            <div class="main_sections_content_wrapper">
-               <img id="profile_pic" src="assets/pictures/portfolioPic03.jpg">
-               <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-               <p id="about_me_text">Hello, my name is Steve Louis I am a 21 year old college student with a passion for developing software.Out of all the things out there why 		software and programing? It's simple really with software you are never done learning, new obstacles present themselves by the minute,day,motnths and so on.A perfect 					example woul be this website,from start to finish I learned so much dare i even say more than i do an entire semester for some of my classes.As I look 									to grow as a developer I'm always looking for oppurtinities, to acquire more real world expeience in the doftware field,wih that said feel free to contact me 						with any questions or inquiries. 
-               </p>
-            </div>
-         </div>
-      </section>
-      <!--<section id="education_skills" class="main_sections_wrapper">-->
-      <section id="education_skills" class="main_sections_wrapper">
-         <div class="container">
-            <div id="education">
-               <h3>Education</h3>
-               <div class="main_sections_content_wrapper">
-                  <p id="education_main"><b>2015-CURRENT</b><br>UNIVERSITY OF CENTRAL FLORIDA, B.S COMPUTER SCIENCE<br>EXPECTED GRADUATION: FAll 2019<br>GPA: 2.92</p>
-                  <ul id="education_list_1">
-                     <li>Introduction To Robotics (C)</li>
-                     <li>Systems Software (C)</li>
-                     <li>Security In Computing (C)</li>
-                     <li>Computer Science I (C)</li>
-                     <li>Computer Science II (Java)</li>
-                     <li>Object Oriented Programing (Java)</li>
-                     <li>Processes For Object-Oriented Software Development(Java)</li>
-                     <li>AI For Gaming (Unity | C#)</li>
-                     <li>Web User Experience And User Interface (HTML | CSS | JS)</li>
-                  </ul>
+            <div id="about_me_content" class="main_sections_content_wrapper">
+				<div id="about_me_card_one" class="about_me_card">
+               <div id="about_me_pic_wrap" class="picture_wrap">
+                  <img id="about_me_pic" class="picture" src="assets/pictures/portfolioPic03.jpg">
                </div>
+				   <p id="about_me_text">
+                    My name is Steve Louis and I am a computer science student looking to obtain real world experience in software 
+                    development through a part-time position.The bulk of my experience so far has come 
+                    from building websites and web based applications for school projects.The websites 
+                    that I have worked on in the past dealt with HTML, CSS. JS, and PHP.I am looking 
+                    for an environment where I can keep growing and expanding my skill sets as a developer.
+ 
+				   </p>
+				</div>
             </div>
-            <div id="skills">
-               <h3>Skillsets</h3>
-               <div class="main_sections_content_wrapper">
-                  <ul>
-                     <li>Web Programming (HTML/CSS/JS)</li>
-                     <li>User Interfaces (Java | Websites)</li>
-                     <li>Unity Game Building/Scripting (C#)</li>
-                     <li>C Programming</li>
-                     <li>Object Oriented Programing (JAVA | C#)</li>
-                     <li>Source Control (GitHub | Git)</li>
-                     <li>AWS</li>
-                  </ul>
+         </div>
+      </section>
+		<!-- Start education div -->
+		<section id="education" class="main_sections_wrapper" >
+         <span id="education_above" class="anchor"></span>
+         <h2 id="education_title" class="main_section_title">Education </h2> 
+		   <div class="container">          
+			   <div id="education_content" class="main_sections_content_wrapper">
+               <div id="education_pic_wrap" class="picture_wrap">
+                  <img id="education_pic" src="assets/pictures/ucf_logo.png">
                </div>
+					<div id="education_text">
+						<div id="education_one" class="education_card" >
+						  <p id="education_info">
+							 <b>2015-CURRENT</b>
+							 <br>UNIVERSITY OF CENTRAL FLORIDA, B.S COMPUTER SCIENCE
+							 <br>EXPECTED GRADUATION: MAY 2020
+							 <br>GPA: 2.92
+						  </p>
+                        </div>
+                        <!--
+						<div id="education_two" class="education_card" >
+						  <ul id="education_list">
+							 <li>Introduction To Robotics</li>
+							 <li>Systems Software</li>
+							 <li>Security In Computing</li>
+							 <li>Computer Science I</li>
+							 <li>Computer Science II</li>
+							 <li>Object Oriented Programing</li>
+							 <li>Processes For Object-Oriented Software Development</li>
+							 <li>AI For Gaming</li>
+							 <li>Web User Experience And User Interface</li>
+						  </ul>
+                        </div>
+                        -->
+					</div>
+				</div>
+			</div>
+		</section>
+            <!-- Start skills div -->
+		<section id="skills" class="main_sections_wrapper">
+            <span id="skills_above" class="anchor"></span>
+            <h2 id="skills_title" class="main_section_title">Skills</h2>
+		   <div class="container">
+			   <div id="skills_content" class="main_sections_content_wrapper">
+                    <!-- skills webdesign div-->
+					<div id="skills_web_card" class="skill_card" >
+                        <div id="skills_web_title_wrap" class="skills_card_title_wrap">
+                            <h3 id="skills_web_title" class="skills_card_title">Website Designing And Building </h3>
+                        </div>
+                        
+                        <div id="web_skills_wrap" class="specific_skill_wrap">
+                            <!-- html skill div-->
+                            <div id="html_skill" class="specific_skill">
+                                <div id="html_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                    <img id="html_skill_pic" class="specific_skill_pic" src="assets/pictures/html5_logo.png">
+                                </div>
+                                <div id="html_skill_title" class="specific_skill_title">
+                                    <p>HTML 5</p>
+                                </div>
+                                <div id="html_skill_level_wrap" class="specific_skill_level_wrap">
+                                    <div id="html_skill_level" class="specific_skill_level">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- css skill div-->
+                            <div id="css_skill" class="specific_skill">
+                                <div id="css_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                    <img id="css_skill_pic" class="specific_skill_pic" src="assets/pictures/css3_logo.png">
+                                </div>
+                                <div id="css_skill_title" class="specific_skill_title">
+                                    <p>CSS 3</p>
+                                </div>
+                                <div id="css_skill_level_wrap" class="specific_skill_level_wrap">
+                                    <div id="css_skill_level" class="specific_skill_level">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Javascript skill div-->
+                            <div id="js_skill" class="specific_skill">
+                                <div id="js_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                    <img id="js_skill_pic" class="specific_skill_pic" src="assets/pictures/js_logo.png">
+                                </div>
+                                <div id="js_skill_title" class="specific_skill_title">
+                                    <p>JavaScript</p>
+                                </div>
+                                <div id="js_skill_level_wrap" class="specific_skill_level_wrap">
+                                    <div id="js_skill_level" class="specific_skill_level">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- php skill div-->
+                            <div id="php_skill" class="specific_skill">
+                                <div id="php_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                    <img id="php_skill_pic" class="specific_skill_pic" src="assets/pictures/php_logo.png">
+                                </div>
+                                <div id="php_skill_title" class="specific_skill_title">
+                                    <p>PHP 7</p>
+                                </div>
+                                <div id="php_skill_level_wrap" class="specific_skill_level_wrap">
+                                    <div id="php_skill_level" class="specific_skill_level">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Adobe sql skill div-->
+                            <div id="sql_skill" class="specific_skill">
+                                <div id="sql_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                    <img id="sql_skill_pic" class="specific_skill_pic" src="assets/pictures/sql_logo.png">
+                                </div>
+                                <div id="sql_skill_title" class="specific_skill_title">
+                                    <p>SQL</p>
+                                </div>
+                                <div id="sql_skill_level_wrap" class="specific_skill_level_wrap">
+                                    <div id="sql_skill_level" class="specific_skill_level">
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- xd skill div-->
+                            <div id="xd_skill" class="specific_skill">
+                                <div id="xd_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                    <img id="xd_skill_pic" class="specific_skill_pic" src="assets/pictures/adobe_xd_logo.png">
+                                </div>
+                                <div id="xd_skill_title" class="specific_skill_title">
+                                    <p>Adobe XD</p>
+                                </div>
+                                <div id="xd_skill_level_wrap" class="specific_skill_level_wrap">
+                                    <div id="xd_skill_level" class="specific_skill_level">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Languages And Technologies div-->
+					<div id="skills_language_card" class="skill_card">      
+                        <div id="skills_languages_title_wrap" class="skills_card_title_wrap">
+                            <h3 id="skills_language_title" class="skills_card_title">Languages And Technologies</h3>
+                        </div>
+                        <div id="languages_skills_wrap" class="specific_skill_wrap">
+                            <!-- python skill div-->
+                            <div id="python_skill" class="specific_skill">
+                                    <div id="python_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                        <img id="python_skill_pic" class="specific_skill_pic" src="assets/pictures/python_logo.png">
+                                    </div>
+                                    <div id="python_skill_title" class="specific_skill_title">
+                                        <p>Python</p>
+                                    </div>
+                                    <div id="python_skill_level_wrap" class="specific_skill_level_wrap">
+                                        <div id="python_skill_level" class="specific_skill_level">
+                        
+                                        </div>
+                                    </div>
+                            </div>
+                            <!-- C skill div-->
+                            <div id="c_skill" class="specific_skill">
+                                <div id="c_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                    <img id="c_skill_pic" class="specific_skill_pic" src="assets/pictures/c_logo.png">
+                                </div>
+                                <div id="c_skill_title" class="specific_skill_title">
+                                    <p>C</p>
+                                </div>
+                                <div id="c_skill_level_wrap" class="specific_skill_level_wrap">
+                                    <div id="c_skill_level" class="specific_skill_level">
+                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- c# skill div-->
+                            <div id="c#_skill" class="specific_skill">
+                                <div id="c#_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                    <img id="c#_skill_pic" class="specific_skill_pic" src="assets/pictures/cs_logo.png">
+                                </div>
+                                <div id="c#_skill_title" class="specific_skill_title">
+                                    <p>C#</p>
+                                </div>
+                                <div id="c#_skill_level_wrap" class="specific_skill_level_wrap">
+                                    <div id="c#_skill_level" class="specific_skill_level">
+                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- github skill div-->
+                            <div id="github_skill" class="specific_skill">
+                                <div id="github_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                    <img id="github_skill_pic" class="specific_skill_pic" src="assets/pictures/github_logo.png">
+                                </div>
+                                <div id="github_skill_title" class="specific_skill_title">
+                                    <p>Github</p>
+                                </div>
+                                <div id="github_skill_level_wrap" class="specific_skill_level_wrap">
+                                    <div id="github_skill_level" class="specific_skill_level">
+                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- unity skill div-->
+                            <div id="unity_skill" class="specific_skill">
+                                <div id="unity_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                    <img id="unity_skill_pic" class="specific_skill_pic" src="assets/pictures/unity_logo.png">
+                                </div>
+                                <div id="unity_skill_title" class="specific_skill_title">
+                                    <p>Unity</p>
+                                </div>
+                                <div id="unity_skill_level_wrap" class="specific_skill_level_wrap">
+                                    <div id="unity_skill_level" class="specific_skill_level">
+                        
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Object oriented programing skill div-->
+                            <div id="java_skill" class="specific_skill">
+                                <div id="java_skill_pic_wrap" class="specific_skill_pic_wrap">
+                                    <img id="java_skill_pic" class="specific_skill_pic" src="assets/pictures/java_logo.png">
+                                </div>
+                                <div id="java_skill_title" class="specific_skill_title">
+                                    <p>Java</p>
+                                </div>
+                                <div id="java_skill_level_wrap" class="specific_skill_level_wrap">
+                                    <div id="java_skill_level" class="specific_skill_level">
+                        
+                                    </div>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+			   </div>
+			</div>
+		</section>
+        <!-- Start projects section -->
+        <section id="projects" class="main_sections_wrapper">
+         <span id="projects_above" class="anchor"></span>
+         <h2 id="projects_title" class="main_section_title">Projects</h2>
+            <div class="container">
+                <div id="projects_main" class="main_sections_content_wrapper">
+                    <!-- First Project -->
+                    <div id="project_one" class="projects">
+                        <div id="project_one_pic_wrap" class="project_pic_wrap">
+                            <img id="project_one_pic" class="project_pic" src="assets/pictures/ai_game_1.png">
+                        </div>
+                        <div id="project_one_text" class="project_text">
+                            <p class="project_title">
+                                2d Top Down Dungeon Crawler In Unity Using C#
+                            </p>
+                                <p class="project_description">
+                                    I was in charge of scripting the player movements, enemy movements, enemy 
+                                    states, and combat mechanics for our game from start to finish.
+                                        
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Second Project -->
+                    <div id="project_two" class="projects">
+                        <div id="project_two_pic_wrap" class="project_pic_wrap">
+                            <img id="project_two_pic" class="project_pic" src="assets/pictures/emerson_home.png">
+                        </div>    
+                        <div id="project_two_text" class="project_text">
+                            <p class="project_title">
+                                E-COMMERCE WEBSITE FOR A CLIENT UING GCP, SHOPIFY’S CMS, HTML, CSS, JS, AND VUE. JS
+                            </p>
+                            <p class="project_description">
+                                I oversaw client communication, documentation and assisted on the HTML and CSS for the website. 
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Third Project -->
+                    <div id="project_three" class="projects">
+                        <div id="project_three_pic_wrap" class="project_pic_wrap">
+                            <img id="project_three_pic" class="project_pic" src="assets/pictures/homepage_desktop_mock.png">
+                        </div>
+                        <div id="project_three_text" class="project_text">
+                            <p class="project_title">
+                                CUSTOM PORTFOLIO WEBSITE USING HTML, CSS, JS AND PHP and a LAMP stack
+                            </p>
+                            <p class="project_description">
+                                I designed and programmed a modern and mobile adaptive portfolio site.                                    
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Fourth Project -->
+                    <div id="project_four" class="projects">
+                        <div id="project_four_pic_wrap" class="project_pic_wrap">
+                            <img id="project_four_pic" class="project_pic" src="assets/pictures/one_click_home.png">
+                        </div>
+                        <div id="project_four_text" class="project_text">                                              
+                            <p class="project_title">
+                                    Web based contact manager (Using HTML5, CSS, JS,PHP and a LAMP stack)
+                            </p>
+                            <p class="project_description">
+                                    For this project I was involved in both the front end and the back-end of the website.For the front end I worked 
+                                    on the creation of the login, register and main page of the website.while On the back-end I contributed on the API
+                                    to enable user registration and login.					  
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-         </div>
-      </section>
-      <!--</section>-->
-      <section id="projects" class="main_sections_wrapper">
-         <div class="container">
-            <h3>Projects</h3>
-            <div class="main_sections_content_wrapper">
-               <p><b>FALL 2018<br>
-                  PC 2D TOP DOWN DUNGEON CRAWLER IN UNITY USING C#</b><br>
-                  I was in charge of scripting the player movements, enemy movements, enemy states, and combat mechanics for
-                  our game from start to finish.
-               </p>
-               <p><b>FALL 2018<br>
-                  E-COMMERCE WEBSITE FOR A CLIENT UING GCP, SHOPIFY’S CMS, HTML, CSS, JS, AND VUE. JS</b><br>
-                  I was in charge of client communication, documentation and assisted in the development of a website for a local
-                  artist.
-               </p>
-               <p><b>DECEMBER 2018<br>
-                  CUSTOM PORTFOLIO WEBSITE USING HTML, CSS, JS AND PHP</b><br>
-                  I designed and build a mobile adaptive and modern looking portfolio site from scratch for my own personal use.
-               </p>
-            </div>
-         </div>
-      </section>
+        </section>
+      <!-- Start contact section -->
       <section id="contact" class="main_sections_wrapper">
+         <span id="contact_above" class="anchor"></span>
+         <h2 id="contact_title" class="main_section_title">Contact</h2>
          <div class="container">
-            <div id="contact_info" class="main_sections_wrapper">
-               <h3>Contact Info</h3>
-               <div class="main_sections_content_wrapper">
-                  <p> The best way to reach me is through the email listed below but you are welcome to reach me through any of the other mediums of you choose to do so.
-                  <p>
-                     <
-                  <ul>
-                     <li>Email: STEVELOUIS4848@GMAIL.COM</li>
-                     <li>Phone: (407) 272-3863</li>
-                  </ul>
-                  >
-                  <div id="social_logos">
+            <!-- start contact_info div -->
+            <div class="main_sections_wrapper">
+               <div id="contact_info" class="main_sections_content_wrapper">
+                  <div id="email_info">
+                     <i id="email_logo" class="far fa-envelope fa-2x"></i>
+                     <p id="email_text">STEVELOUIS4848@GMAIL.COM</p>
+                  </div>
+                  <div id="phone_info">
+                     <i id="phone_logo" class="fas fa-phone fa-2x"></i>
+                     <p id="phone_text">(407) 272-3863</p>
+                  </div>
+                  <div id="contact_social_logos" class="social_logos">
+                      <!--
+                     <a href = "https://www.linkedin.com/in/steve-louis-b52396178/" target="_blank">
                      <i id="linkedin_logo" class="fab fa-linkedin fa-3x" ></i>
+                     </a>
+                    -->
+                     <a href = "https://github.com/stevelouis4848" target="_blank">
                      <i id="github_logo" class="fab fa-github fa-3x"></i>
-                     <i id="google_plus_logo" class="fab fa-google-plus-square fa-3x"></i>
-                     <i id="facebook_logo" class="fab fa-facebook-square fa-3x"></i>
-                     <i id="twitter_logo" class="fab fa-twitter-square fa-3x"></i>
+                     </a>
                   </div>
+                  <!-- contact_info div end-->
                </div>
-               <!-- End main_sections_content for contact_info div -->
-            </div>
-            <!-- End contact_info div -->
-            <div id="send_message" class="main_sections_wrapper">
-               <h3>Send Me A Message</h3>
-               <div class="main_sections_content_wrapper">
-                  <!-- Form -->
-                  <form id="contact-us" method="post" action="#">
-                     <div id="contact_forms_message_wrapper">
-                        <div  id="contact_forms_wrapper">
-                           <!-- Name -->
-                           <input id="name_input" type="text" name="name" id="name" required="required" class="form" placeholder="Name" />
-                           <!-- Email -->
-                           <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email" />
-                           <!-- Subject -->
-                           <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject" />
-                        </div>
-                        <!-- End contact_forms_wrapper -->
-                        <div id="contact_message_wrapper">
-                           <!-- Message -->
-                           <textarea name="message" id="message" class="form"  placeholder="Message"></textarea>
-                        </div>
-                        <!-- End contact_message_wrapper div -->
-                     </div>
-                     <!-- End contact_forms_message_wrapper div -->
-                     <!-- Bottom Submit -->
-                     <!-- Send Button -->
-                     <button type="submit" id="submit" name="submit" class="form-btn">Send Message</button> 
-                     <!-- Clear -->
-                     <div class="clear"></div>
-                  </form>
-                  <!-- Your Mail Message -->
-                  <div class="mail-message-area">
+               <div id="contact_forms_message_wrapper" class="main_sections_content_wrapper">
+                  <form id="contact-us" method="post" action="?">
+                     <!-- Name -->
+                     <input type="text" name="name" id="name" required="required" class="form" placeholder="Name*" />
+                     <!-- Email -->
+                     <input type="email" name="mail" id="mail" required="required" class="form" placeholder="Email*" />
+                     <!-- Subject -->
+                     <input type="text" name="subject" id="subject" required="required" class="form" placeholder="Subject*" />
                      <!-- Message -->
-                     <div class="alert gray-bg mail-message not-visible-message">
-                        <strong>Thank You !</strong> Your email has been delivered.
+                     <textarea name="message" id="message" class="form"  placeholder="Message*"></textarea>
+                     <!-- Bottom Submit -->
+                     <div id="recaptcha_Container">
+                        <div class="g-recaptcha" data-sitekey="6LcKVZEUAAAAAO3H3QglwddmmLnz0iFJfsYn9xx2"></div>
                      </div>
-                     <!-- End mail-message-area -->
-                  </div>
+                     <!-- Send Button -->
+                     <button type="button" id="submit" name="submit" value="submit" class="form-btn">Send Message</button>
+                     <!-- Message -->
+                     <div id="submitMessage">
+                        <!-- End submit-message -->
+                     </div>
+                  </form>
+                  <!-- contact form and message div end -->
                </div>
-               <!-- End main_sections_content_wrapper div for send_message -->
+               <!-- Main section content div end -->
+               <!-- Main Section wrapper done -->
             </div>
-            <!--End send_message div -->
+            <!-- Container div end -->
          </div>
-         <!-- End container div -->
+         <!-- End contact section -->
       </section>
-      <!-- End contact_section section -->
       <footer>
          <div class="container">
             <div class="main_sections_content_wrapper">
-               <p> <i id="copyright_logo" class="fas fa-copyright"></i> Steve Louis 2019 </p>
-               <div id="social_logos">
+               <p>
+                  <i id="copyright_logo" class="fas fa-copyright"></i> Steve Louis 2019 
+               </p>
+               <div id="footer_social_logos" class="social_logos">
+                   <!--
+                  <a href = "https://www.linkedin.com/in/steve-louis-b52396178/" target="_blank">
                   <i id="linkedin_logo" class="fab fa-linkedin fa-3x" ></i>
+                  </a>
+                    -->
+                  <a href = "https://github.com/stevelouis4848?tab=repositories" target="_blank">
                   <i id="github_logo" class="fab fa-github fa-3x"></i>
-                  <i id="google_plus_logo" class="fab fa-google-plus-square fa-3x"></i>
-                  <i id="facebook_logo" class="fab fa-facebook-square fa-3x"></i>
-                  <i id="twitter_logo" class="fab fa-twitter-square fa-3x"></i>
+                  </a>
                </div>
             </div>
          </div>
       </footer>
       <!-- Scripts-->
-      <script src="index.js"></script>
+      <script src="scripts/index.js"></script>
    </body>
 </html>
