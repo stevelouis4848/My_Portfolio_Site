@@ -1,2 +1,0 @@
-# allows  file transfer on shell.ign GUI
-  find /var/www -type f -exec sudo chmod 0664 {} \;
