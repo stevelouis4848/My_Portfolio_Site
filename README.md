@@ -1,2 +1,2 @@
 # Portfolio-Website
-This repository will house my portfolio source code and help me learn html/CSS/Webservices
+This repository showcases the files from my current portfolio site,stevehlouis.com
