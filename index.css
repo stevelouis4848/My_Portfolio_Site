@@ -245,7 +245,7 @@ li a:hover {
 }
 
 #about_me_text {
-  text-align: center;
+  text-align: left;
   color:#767676;
   float:left;
   width:55%;
