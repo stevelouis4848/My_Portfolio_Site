@@ -281,11 +281,22 @@ li a:hover {
   width:48%;
 	margin-right:0;
 }
-#education_info {	
+.education_info {	
   max-width:600px;
   margin: 0;
   color:#767676;
   text-align: left;
+  line-height:1.55;
+}
+
+#education_info_1 {	
+  margin-bottom:.5em;
+  padding-bottom: 0;
+}
+
+#education_info_2 {	
+  padding-top: 0;
+  margin-top:0;
 }
 
 #education_list{
@@ -873,6 +884,10 @@ footer {
 
 /* Media Rules*/
 @media only screen and (max-width:520px) {
+
+  .education_info {	
+    text-align: center;
+  }
 
   .projects{
    width:100%;
