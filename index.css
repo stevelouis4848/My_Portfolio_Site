@@ -25,7 +25,6 @@ p{
   letter-spacing: .04ch;
   font-family: 'Clarkson',Helvetica,sans-serif;
   font-size: 1em;
-  /*color: #767676;*/
 }
 
 /*for the different sections*/
@@ -186,7 +185,6 @@ li a:hover {
   }
 
 #contact{
- /*background: #8a8b8b;*/
   background:#E0E0E0;
 }
 
@@ -220,8 +218,6 @@ li a:hover {
 }
 
 .education_card,.skills_card,.projects{
-  /*background: #f5f6f5;
-   color:black;*/
   background:white;
   overflow:hidden;
 }
@@ -244,7 +240,7 @@ li a:hover {
   padding: 0;
 }
 
-#about_me_text {
+#about_me_text{
   text-align: left;
   color:#767676;
   float:left;
@@ -277,19 +273,19 @@ li a:hover {
 }
 
 #education_text{
-    display: inline-block;
+  display: inline-block;
 	margin:25px;
 	margin-left:30px;
 	padding:0;
-    max-width:600px;
-    width:48%;
+  max-width:600px;
+  width:48%;
 	margin-right:0;
 }
 #education_info {	
   max-width:600px;
   margin: 0;
   color:#767676;
-  text-align:justify;
+  text-align: left;
 }
 
 #education_list{
@@ -355,7 +351,6 @@ li a:hover {
     display:inline-block;
     width:30%;
     max-width:600px;
-    /*border: 1px solid #767676;*/
     margin-top:30px;
     margin-bottom: 30px; 
 }
@@ -369,8 +364,6 @@ li a:hover {
 
 .specific_skill_pic_wrap{
     width:20%;
-    /*border: 1px solid #767676;   
-    border-radius: 30px;*/
     display:block;
     margin-left: auto;
     margin-right: auto;
@@ -506,14 +499,6 @@ li a:hover {
 	padding:0;
 }
 
-/* contact section*/
-#contact h2 {
-  
- /* border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-left: 1px solid black;*/
-}
-
 #contact_info {
   width: 39%;
   float: right;
@@ -581,7 +566,6 @@ li a:hover {
   color: #727272;
   font-size: 13px;
   border-radius: 1px;
-  /*border-bottom: solid 1px black;*/
   border-bottom: solid 1px #303030;
 }
 
@@ -595,9 +579,6 @@ li a:hover {
 
 .form:focus {
   outline: none;
-  /*border:1px solid #4D90FE;
-  -webkit-box-shadow: 0px 0px 5px  #4D90FE;
-  box-shadow: 0px 0px 5px  #4D90FE;*/
   border: 1px solid #0811ff;
   -webkit-box-shadow: 0px 0px 3px #0811ff;
   box-shadow: 0px 0px 3px  #0811ff;
@@ -605,7 +586,6 @@ li a:hover {
 
 .form:active {
   outline: none;
-  /*border:1px solid #4D90FE;*/
   border: 1px solid #0811ff;
   -webkit-box-shadow: 0px 0px 3px #0811ff;
   box-shadow: 0px 0px 3px #0811ff ;
@@ -680,7 +660,6 @@ footer {
   text-transform: uppercase;
   color: white;
   width: 100%;
-	/*border:solid black;*/;
 }
 
 #footer_social_logos i{
@@ -707,164 +686,164 @@ footer {
     padding: 0;
   }
 
-    #menu_mobile a {
-        display: block;
-        border-bottom: 1px solid #EAEAEB;
-        margin: 0 0 -20px 0;
-        padding: 10px 0 10px 0;
-    }
+  #menu_mobile a {
+      display: block;
+      border-bottom: 1px solid #EAEAEB;
+      margin: 0 0 -20px 0;
+      padding: 10px 0 10px 0;
+  }
   
   
-    /*all section titles*/
-    .main_section_title {
-        width: 50%;
-    }
+  /*all section titles*/
+  .main_section_title {
+      width: 50%;
+  }
 
 
-    #about_me_pic_wrap{ 
-        width: 75%;
-        max-width:300px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        padding:0;
-    }
-
-    #about_me_pic{
-        padding:0;
-    }
-
-    #about_me_text {
-        display: block;
-        width:95%;
-        padding:0;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .education_card{
-        max-width: 350px;
-        width:58%;
-        display:block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    #education_pic_wrap{ 
-        float:none;
-        width: 75%;
-        max-width:250px;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    #education_text{
-        display:block;
-		width:100%;
-        padding:0;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
-
-    .skill_card{
-      margin:0;
+  #about_me_pic_wrap{ 
+      width: 75%;
+      max-width:300px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
       padding:0;
-    }
-    
-    .skills_card_title_wrap{
-        width:100%;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  }
 
-    .skills_card_title{
-        text-align: center;
-    }
+  #about_me_pic{
+      padding:0;
+  }
 
-    .specific_skill_wrap{
-        width:100%;
-        min-height: 250px;
-        margin:2%;
-        margin-bottom:50px;
-    }
-    
-    .specific_skill{
-        margin-right:10%;
-        width:40%;
-        margin-top:0;
-        margin-bottom:70px;
-    }
+  #about_me_text {
+      display: block;
+      width:95%;
+      padding:0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
 
- #html_skill,#sql_skill,
-#python_skill,#unity_skill{
-    margin-right:10%;
-}
+  .education_card{
+      max-width: 350px;
+      width:58%;
+      display:block;
+      margin-left: auto;
+      margin-right: auto;
+  }
 
- #css_skill,#php_skill,
- #xd_skill,#c_skill,
-#github_skill,#java_skill{
-    margin-right:0;
-}
+  #education_pic_wrap{ 
+      float:none;
+      width: 75%;
+      max-width:250px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
 
-    .projects{
-        width:100%;
-        margin: 0;
-        margin-bottom: 50px;
-        max-height:700px;
-    }
+  #education_text{
+      display:block;
+      width:100%;
+      padding:0;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
 
-    .project_pic_wrap{
-        float:none;
-        width: 80%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .skill_card{
+    margin:0;
+    padding:0;
+  }
+  
+  .skills_card_title_wrap{
+      width:100%;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
 
-    #project_one_pic_wrap, #project_three_pic_wrap{
-        float:none;
-        width: 80%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        margin-top: 20px;
-        margin-bottom: 20px;
-    }
+  .skills_card_title{
+      text-align: center;
+  }
 
-    .project_pic{
-        padding:0;
-        float:none;
-        display: block;
-        max-width:450px;
-        width:100%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  .specific_skill_wrap{
+      width:100%;
+      min-height: 250px;
+      margin:2%;
+      margin-bottom:50px;
+  }
+  
+  .specific_skill{
+      margin-right:10%;
+      width:40%;
+      margin-top:0;
+      margin-bottom:70px;
+  }
 
-    #project_two_text, #project_four_text{
-        float:none;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  #html_skill,#sql_skill,
+  #python_skill,#unity_skill{
+      margin-right:10%;
+  }
 
-    .project_text{
-        width:62%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
+  #css_skill,#php_skill,
+  #xd_skill,#c_skill,
+  #github_skill,#java_skill{
+      margin-right:0;
+  }
+
+  .projects{
+      width:100%;
+      margin: 0;
+      margin-bottom: 50px;
+      max-height:700px;
+  }
+
+  .project_pic_wrap{
+      float:none;
+      width: 80%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+  #project_one_pic_wrap, #project_three_pic_wrap{
+      float:none;
+      width: 80%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+  .project_pic{
+      padding:0;
+      float:none;
+      display: block;
+      max-width:450px;
+      width:100%;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  #project_two_text, #project_four_text{
+      float:none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
+
+  .project_text{
+      width:62%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+  }
 
   #education,
 	#skills,
@@ -893,26 +872,34 @@ footer {
 }
 
 /* Media Rules*/
-@media only screen and (max-width:420px) {
+@media only screen and (max-width:520px) {
+
   .projects{
    width:100%;
   }
 
+  .project_text{
+    width:80%;
+  }
+
+  #about_me_text, #education_text, .project_text, #email_text, #phone_text{
+    min-width:0px;
+  }
   .specific_skill{
     width:100%;
     margin:0;
     margin-bottom: 50px;
-}
+  }
 
-#html_skill,#css_skill,
-#php_skill,#sql_skill,
-#python_skill,#c_skill,
-#github_skill,#unity_skill{
-    margin-right:0;
-}
+  #html_skill,#css_skill,
+  #php_skill,#sql_skill,
+  #python_skill,#c_skill,
+  #github_skill,#unity_skill{
+      margin-right:0;
+  }
 
-.specific_skill_level_wrap {
-    width: 50%;
-}
+  .specific_skill_level_wrap {
+      width: 50%;
+  }
 
 }
