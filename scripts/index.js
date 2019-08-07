@@ -1,7 +1,6 @@
 // Global variabbles
 // helps with Hides the mobile menu when webpage is cliked on
 var body = document.getElementById("body");
-var query_width = 1000;
 var menu_trans_y = 10;
 
 // Turns the header transparent and white and appropriate changes.
@@ -46,14 +45,11 @@ function hide_mobile_menu() {
 function width_change_action() {
  if (page_width.matches) {
   hide_mobile_menu();
-  //console.log("matched");
  }
 }
 
 // Depending on page y position header is different.
 function page_header_change() {
- //console.log("position: " + $(window).scrollTop());
-
  if ($(window).scrollTop() <= menu_trans_y && $("#menu_mobile").is(':hidden')) {
   header_transparent();
  } else {
@@ -75,7 +71,6 @@ $(document).ready(function() {
 
  function bodyClick(event) {
   var except = event.target.id;
-  //console.log(except);
   if (except === "hamburger_menu" && $("#menu_mobile").is(':hidden')) {
    show_mobile_menu();
   } else {
@@ -120,16 +115,11 @@ $(document).ready(function() {
    dataType: 'json', // data type
    data: data = $("#contact-us").serialize(), // POST data || get data
    success: function(result) {
-    // you can see the result from the console
-    // tab of the developer tools
-    //console.log(result);
-    //console.log(data);
 
     if (result === "success") {
 
      var successMessage = "<strong>Thank You !</strong> Your message has been send.";
      $("#submitMessage").html(successMessage).css('color', 'green');
-     //console.log("<strong>Thank You !</strong> Your email has been delivered.");
 
      $("#contact-us")[0].reset();
      grecaptcha.reset();
@@ -138,7 +128,6 @@ $(document).ready(function() {
     }
    },
    error: function(xhr, resp, text) {
-    //console.log(xhr, resp, text);
    }
   });
 
