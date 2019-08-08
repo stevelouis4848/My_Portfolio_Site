@@ -2,6 +2,18 @@
 // helps with Hides the mobile menu when webpage is cliked on
 var body = document.getElementById("body");
 var menu_trans_y = 10;
+var preloadOffSetTime = 7500;
+var preloadChangeTime = 15000;
+var pictureChangeTime = 15000;
+var pictureArraySize = 7;
+var currentPicIndex = -1;
+var pictureLinkArray = ["url('../assets/pictures/bg_8.jpg')",
+                        "url('../assets/pictures/bg_1.jpg')",
+                        "url('../assets/pictures/bg_3.jpg')",
+                        "url('../assets/pictures/bg_4.jpg')",
+                        "url('../assets/pictures/bg_2.jpg')",
+                        "url('../assets/pictures/bg_5.jpg')",
+                        "url('../assets/pictures/bg_9.jpg')"]
 
 // Turns the header transparent and white and appropriate changes.
 function header_transparent() {
@@ -57,6 +69,46 @@ function page_header_change() {
  }
 }
 
+//Preloads the next image in the hidden div
+function preloadShowcasePic(){
+    currentPicIndex++;
+    if(currentPicIndex >= pictureArraySize)
+        currentPicIndex = 0;
+
+    if($("#showcase_1").css('visibility') == "hidden")
+        $("#showcase_1").css('background-image', pictureLinkArray[currentPicIndex]);
+    else
+        $("#showcase_2").css('background-image', pictureLinkArray[currentPicIndex]);
+}
+
+//Runs the preload function and then very sertain interval
+function preloadOffSet(){
+    preloadShowcasePic();
+    setInterval(preloadShowcasePic, preloadChangeTime);
+}
+
+//Function to change showcase picture,hides 1 div and shows another
+function changeShowcasePic(){
+
+    if($("#showcase_1").css('visibility') == "visible"){
+        $("#showcase_1").css("visibility", "hidden");
+        $("#showcase_1").css("min-height", 0+"px");
+        $("#showcase_1").css("height", 0+"px");
+
+        $("#showcase_2").css("visibility", "visible");
+        $("#showcase_2").css("min-height", 600+"px");
+    }
+    else{
+        $("#showcase_1").css("visibility", "visible");
+        $("#showcase_1").css("min-height", 600+"px");
+        
+        $("#showcase_2").css("visibility", "hidden");
+        $("#showcase_2").css("min-height", 0+"px");
+        $("#showcase_1").css("height", 0+"px");
+    }
+}
+
+
 $(document).ready(function() {
  page_header_change();
 });
@@ -103,6 +155,12 @@ $(document).ready(function() {
   });
  }
 });
+
+//preloads the image with after a certain time passes.
+$(document).ready(setTimeout(preloadOffSet, preloadOffSetTime))
+
+//Changes the showcase picture every certain time in milliseconds
+$(document).ready(setInterval(changeShowcasePic, pictureChangeTime))
 
 //Sends Post to server when submit button is pressed,also return response
 $(document).ready(function() {
