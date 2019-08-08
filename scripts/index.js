@@ -5,11 +5,10 @@ var menu_trans_y = 10;
 var preloadOffSetTime = 7500;
 var preloadChangeTime = 15000;
 var pictureChangeTime = 15000;
-var pictureArraySize = 7;
+var pictureArraySize = 6;
 var currentPicIndex = -1;
 var pictureLinkArray = ["url('../assets/pictures/bg_8.jpg')",
                         "url('../assets/pictures/bg_1.jpg')",
-                        "url('../assets/pictures/bg_3.jpg')",
                         "url('../assets/pictures/bg_4.jpg')",
                         "url('../assets/pictures/bg_2.jpg')",
                         "url('../assets/pictures/bg_5.jpg')",
