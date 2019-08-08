@@ -147,10 +147,11 @@ li a:hover {
 	margin-left:0;
 }
 
-/*showcase sectionn*/
-#showcase {
+/*showcase sectio/*showcase sectionn*/
+#showcase_1{
   min-height: 600px;
-  background: url("../assets/pictures/contemporary-dark (1).jpg");
+  visibility: visible;
+  background: url("../assets/pictures/bg_9.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -158,18 +159,70 @@ li a:hover {
   color: white;
 }
 
-#showcase h3 {
+#showcase_2{
+  min-height: 0;
+  height: 0;
+  visibility:hidden;
+  background: url("../assets/pictures/bg_8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+
+.showcase h3 {
   width: 80%;
   font-size: 55px;
   margin: 40px 10% 20px 10%;
   padding: 0;
   border: none;
+  z-index: 0;
 }
 
-#showcase p {
+.showcase p {
   float: right;
   text-align: center;
   font-size: 25px;
+  z-index: 0;
+}n*/
+#showcase_1{
+  min-height: 600px;
+  visibility: visible;
+  background: url("../assets/pictures/bg_9.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+
+#showcase_2{
+  min-height: 0;
+  height: 0;
+  visibility:hidden;
+  background: url("../assets/pictures/bg_8.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  color: white;
+}
+
+.showcase h3 {
+  width: 80%;
+  font-size: 55px;
+  margin: 40px 10% 20px 10%;
+  padding: 0;
+  border: none;
+  z-index: 0;
+}
+
+.showcase p {
+  float: right;
+  text-align: center;
+  font-size: 25px;
+  z-index: 0;
 }
 
 
