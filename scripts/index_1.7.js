@@ -2,7 +2,7 @@
 // helps with Hides the mobile menu when webpage is cliked on
 var body = document.getElementById("body");
 var menu_trans_y = 10;
-var preloadOffSetTime = 7500;
+var preloadOffSetTime = 1000;
 var preloadChangeTime = 15000;
 var pictureChangeTime = 15000;
 var pictureArraySize = 6;
@@ -13,6 +13,16 @@ var pictureLinkArray = ["url('../assets/pictures/bg_8.jpg')",
                         "url('../assets/pictures/bg_2.jpg')",
                         "url('../assets/pictures/bg_5.jpg')",
                         "url('../assets/pictures/bg_9.jpg')"]
+
+//Updates the percentage of the scroll progess bar at the top of the page
+function update_progress_scroll_bar(){
+    var page_offset_y = 800;
+    var page_position = $(window).scrollTop();
+    var page_height = document.body.scrollHeight - page_offset_y;
+    var scroll_percentage = (page_position  / page_height) * 100;
+
+    $("#scroll_progress_inner_bar").css('width', scroll_percentage + "%");
+}
 
 // Turns the header transparent and white and appropriate changes.
 function header_transparent() {
@@ -107,92 +117,108 @@ function changeShowcasePic(){
     }
 }
 
-
-$(document).ready(function() {
- page_header_change();
-});
-
 // Dropdown menu is shown when menu icon is clicked.
 // Dropdown menu is hidden if open and anywhere is clicked
-$(document).ready(function() {
- if (body.addEventListener)
-  body.addEventListener("click", bodyClick, false);
- else
-  body.attachEvent("onclick", bodyClick);
+function page_click_events() {
+    if (body.addEventListener)
+        body.addEventListener("click", bodyClick, false);
+    else
+        body.attachEvent("onclick", bodyClick);
 
- function bodyClick(event) {
-  var except = event.target.id;
-  if (except === "hamburger_menu" && $("#menu_mobile").is(':hidden')) {
-   show_mobile_menu();
-  } else {
-   hide_mobile_menu();
-  }
- }
-});
+    function bodyClick(event) {
+        var except = event.target.id;
+        if (except === "hamburger_menu" && $("#menu_mobile").is(':hidden')) {
+            show_mobile_menu();
+        } else {
+            hide_mobile_menu();
+        }
+    }
+}
 
-// Turn header invisible when page is at the top
-$(document).ready(function() {
- $(window).scroll(function() {
-  page_header_change();
- });
-});
+
+// Runs everytime the page is scrolled
+// Calls header change function
+// Calls progress bar updater  
+function page_scroll_events(){
+
+    $(window).scroll(function() {
+        page_header_change();
+        update_progress_scroll_bar();
+    });
+}
 
 //Smoothly scolls to anchor links
-$(document).ready(function() {
- let anchorlinks = document.querySelectorAll('a[href^="#"]');
+function smooth_navigation_scroll(){
+    let anchorlinks = document.querySelectorAll('a[href^="#"]');
 
- for (let item of anchorlinks) { // relitere 
-  item.addEventListener('click', (e) => {
-   let hashval = item.getAttribute('href');
-   let target = document.querySelector(hashval);
-   target.scrollIntoView({
-    behavior: 'smooth',
-    block: 'start'
-   });
-   history.pushState(null, null, hashval);
-   e.preventDefault();
-  });
- }
-});
-
-//preloads the image with after a certain time passes.
-$(document).ready(setTimeout(preloadOffSet, preloadOffSetTime))
-
-//Changes the showcase picture every certain time in milliseconds
-$(document).ready(setInterval(changeShowcasePic, pictureChangeTime))
-
-//Sends Post to server when submit button is pressed,also return response
-$(document).ready(function() {
- // click on button submit
- $("#submit").on('click', function() {
-  // send ajax
-  $.ajax({
-   url: '../php/message.php', // url where to submit the request
-   type: "POST", // type of action POST || GET
-   dataType: 'json', // data type
-   data: data = $("#contact-us").serialize(), // POST data || get data
-   success: function(result) {
-
-    if (result === "success") {
-
-     var successMessage = "<strong>Thank You !</strong> Your message has been send.";
-     $("#submitMessage").html(successMessage).css('color', 'green');
-
-     $("#contact-us")[0].reset();
-     grecaptcha.reset();
-    } else {
-     $("#submitMessage").html(result).css('color', 'red');
+    for (let item of anchorlinks) { // relitere 
+        item.addEventListener('click', (e) => {
+            let hashval = item.getAttribute('href');
+            let target = document.querySelector(hashval);
+            target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start'
+            });
+            history.pushState(null, null, hashval);
+            e.preventDefault();
+        });
     }
-   },
-   error: function(xhr, resp, text) {
-   }
-  });
+}
 
-  if ($("#submitMessage").is(":hidden")) {
-   $("#submitMessage").show();
-  }
- });
-});
+// Sends Post to server when submit button is pressed,also return response
+function submit_message(){
+    // send ajax
+  $.ajax({
+    url: '../php/message.php', // url where to submit the request
+    type: "POST", // type of action POST || GET
+    dataType: 'json', // data type
+    data: data = $("#contact-us").serialize(), // POST data || get data
+    success: function(result) {
+     if (result === "success") {
+ 
+      var successMessage = "<strong>Thank You !</strong> Your message has been send.";
+      $("#submitMessage").html(successMessage).css('color', 'green');
+ 
+      $("#contact-us")[0].reset();
+      grecaptcha.reset();
+     } else {
+      $("#submitMessage").html(result).css('color', 'red');
+     }
+    },
+    error: function(xhr, resp, text) {
+    }
+   });
+ 
+   if ($("#submitMessage").is(":hidden")) {
+    $("#submitMessage").show();
+   }
+}
+
+function general_and_run_on_first_load(){
+
+    //functions run on first load
+    page_header_change();
+    update_progress_scroll_bar();
+    page_click_events();
+    page_scroll_events(); 
+    smooth_navigation_scroll();
+
+    // show progress bar correct position on window resize;
+    window.onresize = update_progress_scroll_bar;
+
+    // preloads the image with after a certain time passes.
+    setTimeout(preloadOffSet, preloadOffSetTime);
+
+    //Changes the showcase picture every certain time in milliseconds
+    setInterval(changeShowcasePic, pictureChangeTime);
+
+    // Calls fucntion when submit button is clicked
+    $("#submit").on('click', submit_message);
+}
+
+// Runs when the dom has loaded
+$(document).ready(general_and_run_on_first_load);
+
 
 var page_width = window.matchMedia("(min-width: 1000px)");
 width_change_action(); // Call listener function at run time
