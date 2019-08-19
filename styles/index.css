@@ -55,6 +55,24 @@ p{
   font-size: 1em;
 }
 
+/* Scroll progress bar */
+#scroll_progress_outer_bar{
+  width:100%;
+  height:3px;
+  background-color: white;
+  z-index: 2;
+  position: fixed;
+
+}
+
+#scroll_progress_inner_bar{
+  width:0;
+  height:3px;
+  background-color:black;
+  z-index: 2;
+  position: fixed;
+}
+
 /* Header and nav bar*/
 #header {
   z-index: 1;
@@ -133,6 +151,11 @@ li a:hover {
   margin-top: -48px;
  /*same height as header*/
   visibility: hidden;
+}
+
+#showcase_above{
+  margin-top: 0;
+  height: 0;
 }
 
 .social_logos a {
@@ -250,7 +273,7 @@ li a:hover {
   width: 20%;
   outline: none;
   font-size: 40px;
-  color: #707070;  
+  color: #ffffff;  
   background-color: #9A9EA1;
   overflow:hidden;
   margin-top:30px;
@@ -462,56 +485,57 @@ li a:hover {
 .specific_skill_level{
     box-shadow:0 0 10px rgba(0,0,0,.05);
     max-width:480px;
-    width:60%;
     background-color: green;
     height:10px;
     border-radius: 30px
 }
 
 #html_skill_level{
-    width:80%; 
+  width:80%; 
 }
 
 #css_skill_level{
-    width:60%;
+  width:70%;
 }
 
 #js_skill_level{
-    width:50%;
+  width:60%;
 }
 
 #php_skill_level{
-    width:50%;
+  width:50%;
 }
 
 #sql_skill_level{
-    width:40%;
+  width:40%;
 }
 
 #xd_skill_level{
-    width:50%;
+  width:30%;
 }
 
-#python_skill_level{
-    width:30%;
+#github_skill_level{
+width:70%;
 }
 
 #c_skill_level{
-    width:70%;
+width:70%;
 }
 
-#c#_skill_level{
-    width:30%;
+#c_sharp_skill_level{
+width:60%;
 }
-#github_skill_level{
-    width:70%;
-}
+
 #unity_skill_level{
-    width:40%;
+width:60%;
+}
+
+#python_skill_level{
+  width:50%;
 }
 
 #java_skill_level{
-    width:25%;
+  width:40%;
 }
 
 /* projects section*/
@@ -848,13 +872,13 @@ footer {
   }
 
   #html_skill,#sql_skill,
-  #python_skill,#unity_skill{
+  #github_skill,#python_skill{
       margin-right:10%;
   }
 
   #css_skill,#php_skill,
   #xd_skill,#c_skill,
-  #github_skill,#java_skill{
+  #unity_skill,#java_skill{
       margin-right:0;
   }
 
